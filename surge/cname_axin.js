@@ -431,7 +431,7 @@ async function operator(e = [], targetPlatform, env) {
                 (sheng || city || iisp) && (zhi  = "直连");
               }
               flag && (adflag = getflag(outu));
-              game && (OGame = /Microsoft|微软/i.test(pk.name) ? (flag ? "👌" : FGF+"Game") : OGame);
+              game && (OGame = /SG Microsoft|Hostwinds/i.test(pk.name) ? (flag ? "👌" : FGF+"Game") : OGame);
               if (bl){
                 const match = pk.name.match(/((倍率|X|x|×)\D?((\d\.)?\d+)\D?)|((\d\.)?\d+)(倍|X|x|×)/);
                 if (match) {
