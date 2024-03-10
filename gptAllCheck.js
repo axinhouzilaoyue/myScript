@@ -5,7 +5,7 @@ async function operator(proxies = [], targetPlatform, context) {
   const target = isLoon ? 'Loon' : isSurge ? 'Surge' : undefined
 
   const batches = []
-  const concurrency = parseInt($arguments.concurrency || 10) // 一组并发数
+  const concurrency = parseInt($arguments.concurrency || 40) // 一组并发数
   for (let i = 0; i < proxies.length; i += concurrency) {
     const batch = proxies.slice(i, i + concurrency)
     batches.push(batch)
@@ -67,7 +67,7 @@ async function operator(proxies = [], targetPlatform, context) {
   // 请求
   async function http(opt = {}) {
     const METHOD = opt.method || $arguments.method || 'get'
-    const TIMEOUT = parseFloat(opt.timeout || $arguments.timeout || 5000)
+    const TIMEOUT = parseFloat(opt.timeout || $arguments.timeout || 1000)
     const RETRIES = parseFloat(opt.retries || $arguments.retries || 1)
     const RETRY_DELAY = parseFloat(opt.retry_delay || $arguments.retries || 1000)
 
