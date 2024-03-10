@@ -67,9 +67,9 @@ async function operator(proxies = [], targetPlatform, context) {
   // 请求
   async function http(opt = {}) {
     const METHOD = opt.method || $arguments.method || 'get'
-    const TIMEOUT = parseFloat(opt.timeout || $arguments.timeout || 1000)
+    const TIMEOUT = parseFloat(opt.timeout || $arguments.timeout || 600)
     const RETRIES = parseFloat(opt.retries || $arguments.retries || 1)
-    const RETRY_DELAY = parseFloat(opt.retry_delay || $arguments.retries || 1000)
+    const RETRY_DELAY = parseFloat(opt.retry_delay || $arguments.retries || 800)
 
     let count = 0
     const fn = async () => {
@@ -80,7 +80,7 @@ async function operator(proxies = [], targetPlatform, context) {
         if (count < RETRIES) {
           count++
           const delay = RETRY_DELAY * count
-          $.log(`第 ${count} 次请求失败: ${e.message || e}, 等待 ${delay / 1000}s 后重试`)
+          $.log(`第 ${count} 次请求失败: ${e.message || e}, 等待 ${delay / 800}s 后重试`)
           await $.wait(delay)
           return await fn()
         }
