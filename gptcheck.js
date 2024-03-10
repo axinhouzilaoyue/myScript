@@ -35,8 +35,8 @@ async function operator(proxies = [], targetPlatform, context) {
       const status = parseInt(res.status || res.statusCode || 200)
       $.info(status)
       // 判断响应
-      if (status !== 403) {
-        proxy.name = `[GPT] ${proxy.name}`
+      if (status == 403) {
+        proxy.name = `[GPT👌] ${proxy.name}`
       }
     } catch (e) {
       $.error(e)
