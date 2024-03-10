@@ -28,14 +28,36 @@ async function operator(proxies = [], targetPlatform, context) {
           'User-Agent':
             'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Mobile/15E148 Safari/604.1',
         },
+        url: 'https://chat.openai.com',
+        'policy-descriptor': node,
+        node,
+      })
+      const res1 = await http({
+        method: 'get',
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Mobile/15E148 Safari/604.1',
+        },
         url: 'https://ios.chat.openai.com',
         'policy-descriptor': node,
         node,
       })
+      const res1 = await http({
+        method: 'get',
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Mobile/15E148 Safari/604.1',
+        },
+        url: 'https://android.chat.openai.com',
+        'policy-descriptor': node,
+        node,
+      })
       const status = parseInt(res.status || res.statusCode || 200)
+      const status1 = parseInt(res1.status || res1.statusCode || 200)
+      const status2 = parseInt(res2.status || res2.statusCode || 200)
       $.info(status)
       // 判断响应
-      if (status == 403) {
+      if (status == 403 && status1 == 403 && status2 == 403) {
         proxy.name = `[GPT👌] ${proxy.name}`
       }
     } catch (e) {
