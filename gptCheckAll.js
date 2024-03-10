@@ -42,7 +42,7 @@ async function operator(proxies = [], targetPlatform, context) {
         'policy-descriptor': node,
         node,
       })
-      const res1 = await http({
+      const res2 = await http({
         method: 'get',
         headers: {
           'User-Agent':
