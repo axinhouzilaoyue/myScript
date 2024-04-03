@@ -3,7 +3,7 @@
 "description":"by axin", 
 "icons":
     [
-        {"name":"ai.png", "url":"https://raw.githubusercontent.com/axinhouzilaoyue/myScript/main/QuantumultX/icons/openai.png"},
+        {"name":"openai.png", "url":"https://raw.githubusercontent.com/axinhouzilaoyue/myScript/main/QuantumultX/icons/openai.png"},
         
     ]
 }
