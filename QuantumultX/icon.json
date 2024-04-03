@@ -3,7 +3,7 @@
 "description":"by k*#", 
 "icons":
     [
-        {"name":"ai.png", "url":""},
+        {"name":"ai.png", "url":"https://raw.githubusercontent.com/axinhouzilaoyue/myScript/main/QuantumultX/icons/openai.png"},
         
     ]
 }
