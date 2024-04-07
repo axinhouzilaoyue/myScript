@@ -59,7 +59,7 @@ async function operator(proxies = [], targetPlatform, context) {
         // 判断响应
         // https://zset.cc/archives/34/
         if (status == 403) {
-          proxy.name = `[GPT👌] ${proxy.name}`
+          proxy.name = `[GPT] ${proxy.name}`
         }
       }
     } catch (e) {
