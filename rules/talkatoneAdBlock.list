@@ -1,3 +1,9 @@
+# NAME: talkatoneAdBlock
+# AUTHOR: axin
+# UPDATED: 2024-04-14 21:09
+# DESCRIPTION: 去除 talkatone 中的广告
+
 DOMAIN-SUFFIX,adsappier.com
-DOMAIN-SUFFIX,googleads.g.doubleclick-cn.net
-DOMAIN-SUFFIX,static.googleadsserving.cn
+DOMAIN-KEY,googleads
+# DOMAIN-SUFFIX,googleads.g.doubleclick-cn.net
+# DOMAIN-SUFFIX,static.googleadsserving.cn
