@@ -4,6 +4,4 @@
 # DESCRIPTION: 去除 talkatone 中的广告
 
 DOMAIN-SUFFIX,adsappier.com
-DOMAIN-KEY,googleads
-# DOMAIN-SUFFIX,googleads.g.doubleclick-cn.net
-# DOMAIN-SUFFIX,static.googleadsserving.cn
+DOMAIN-KEYWORD,googleads
