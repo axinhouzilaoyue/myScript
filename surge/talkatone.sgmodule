@@ -11,7 +11,7 @@ throttle-rewrite = type=http-response,pattern=^https:\/\/gum\.criteo\.com\/appev
 
 
 [URL Rewrite]
-^https:\/\/aax-fe-sin\.amazon-adsystem\.com\/x\/px\/p\/.+\/\{.+?\} - reject
+# ^https:\/\/aax-fe-sin\.amazon-adsystem\.com\/x\/px\/p\/.+\/\{.+?\} - reject
 # ^https?:\/\/httpdns\.music\.163\.com - reject
 
 
@@ -22,7 +22,7 @@ throttle-rewrite = type=http-response,pattern=^https:\/\/gum\.criteo\.com\/appev
 # DOMAIN-SUFFIX,criteo.com,REJECT
 # DOMAIN-SUFFIX,pubmatic.com,REJECT
 # DOMAIN-SUFFIX,smaato.net,REJECT
-# DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
 # DOMAIN-KEYWORD,googleads,REJECT
 # DOMAIN-SUFFIX,adsappier.com,REJECT
 # DOMAIN-SUFFIX,appier.net,REJECT
@@ -52,4 +52,4 @@ IP-CIDR,63.251.124.0/24,DIRECT
 
 
 [MITM]
-hostname = %APPEND% gum.criteo.com,aax-fe-sin.amazon-adsystem.com
+hostname = %APPEND% gum.criteo.com
