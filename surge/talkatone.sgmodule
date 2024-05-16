@@ -52,4 +52,4 @@ IP-CIDR,63.251.124.0/24,DIRECT
 
 
 [MITM]
-hostname = %APPEND% gum.criteo.com
+hostname = %APPEND% gum.criteo.com,amazon-adsystem.com
