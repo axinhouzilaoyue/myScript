@@ -11,7 +11,7 @@ throttle-rewrite = type=http-response,pattern=^https:\/\/gum\.criteo\.com\/appev
 
 
 [URL Rewrite]
-# ^https?:\/\/httpdns.n\.netease\.com - reject
+^https:\/\/aax-fe-sin\.amazon-adsystem\.com\/x\/px\/p\/.+\/\{.+?\} - reject
 # ^https?:\/\/httpdns\.music\.163\.com - reject
 
 
