@@ -59,29 +59,11 @@ let args = getArgs();
     let gptSupportStatus = SUPPORTED_LOCATIONS.includes(traceData.loc) ? "ChatGPT: ✔️" : "ChatGPT: ❌";
 
     
- 
     let youtubeCheck = youtubeResult
     let netflixCheck = netflixResult
     let gptCheck = gptSupportStatus
     let disneyCheck = disney_result
  
-    // 字体样式（需根据实际使用的字体调整）
-    let font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
-    
-    // 计算目标宽度
-    let targetWidth = Math.max(
-        getTextWidth(youtubeCheck, font),
-        getTextWidth(netflixCheck, font),
-        getTextWidth(gptCheck, font),
-        getTextWidth(disneyCheck, font)
-    );
-    
-    // 调整长度
-    youtubeCheck = padStringToWidth(youtubeCheck, targetWidth, font);
-    netflixCheck = padStringToWidth(netflixCheck, targetWidth, font);
-    gptCheck = padStringToWidth(gptCheck, targetWidth, font);
-    disneyCheck = padStringToWidth(disneyCheck, targetWidth, font);
-
 
     let content = `${youtubeCheck} | ${netflixCheck}\n${gptCheck} | ${disneyCheck}`;
 
@@ -92,24 +74,6 @@ let args = getArgs();
 
     $done(panel_result);
 })();
-
-function getTextWidth(text, font) {
-    // 创建一个临时元素
-    let canvas = document.createElement('canvas');
-    let context = canvas.getContext('2d');
-    context.font = font;
-    let metrics = context.measureText(text);
-    return metrics.width;
-}
-
-function padStringToWidth(str, targetWidth, font) {
-    let currentWidth = getTextWidth(str, font);
-    while (currentWidth < targetWidth) {
-        str += ' ';
-        currentWidth = getTextWidth(str, font);
-    }
-    return str;
-}
 
 function getArgs() {
     return Object.fromEntries(
