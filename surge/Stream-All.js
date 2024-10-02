@@ -20,6 +20,7 @@ Surge配置参考注释
  
  */
 
+
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
@@ -30,65 +31,70 @@ const REQUEST_HEADERS = {
   'User-Agent': UA,
   'Accept-Language': 'en',
 };
-const SUPPORTED_LOCATIONS = ["T1","XX","AL","DZ","AD","AO","AG","AR","AM","AU","AT","AZ","BS","BD","BB","BE","BZ","BJ","BT","BA","BW","BR","BG","BF","CV","CA","CL","CO","KM","CR","HR","CY","DK","DJ","DM","DO","EC","SV","EE","FJ","FI","FR","GA","GM","GE","DE","GH","GR","GD","GT","GN","GW","GY","HT","HN","HU","IS","IN","ID","IQ","IE","IL","IT","JM","JP,\u2009","JO","KZ","KE","KI","KW","KG","LV","LB","LS","LR","LI","LT","LU","MG","MW","MY","MV","ML","MT","MH","MR","MU","MX","MC","MN","ME","MA","MZ","MM","NA","NR","NP","NL","NZ","NI","NE","NG","MK","NO","OM","PK","PW","PA","PG","PE","PH","PL","PT","QA","RO","RW","KN","LC","VC","WS","SM","ST","SN","RS","SC","SL","SG","SK","SI","SB","ZA","ES","LK","SR","SE","CH","TH","TG","TO","TT","TN","TR","TV","UG","AE","US","UY","VU","ZM","BO","BN","CG","CZ","VA","FM","MD","PS","KR","TW","TZ","TL","GB"];
+const SUPPORTED_LOCATIONS = ["T1", "XX", "AL", "DZ", "AD", "AO", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BD", "BB", "BE", "BZ", "BJ", "BT", "BA", "BW", "BR", "BG", "BF", "CV", "CA", "CL", "CO", "KM", "CR", "HR", "CY", "DK", "DJ", "DM", "DO", "EC", "SV", "EE", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GR", "GD", "GT", "GN", "GW", "GY", "HT", "HN", "HU", "IS", "IN", "ID", "IQ", "IE", "IL", "IT", "JM", "JP,\u2009", "JO", "KZ", "KE", "KI", "KW", "KG", "LV", "LB", "LS", "LR", "LI", "LT", "LU", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MR", "MU", "MX", "MC", "MN", "ME", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "MK", "NO", "OM", "PK", "PW", "PA", "PG", "PE", "PH", "PL", "PT", "QA", "RO", "RW", "KN", "LC", "VC", "WS", "SM", "ST", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "ZA", "ES", "LK", "SR", "SE", "CH", "TH", "TG", "TO", "TT", "TN", "TR", "TV", "UG", "AE", "US", "UY", "VU", "ZM", "BO", "BN", "CG", "CZ", "VA", "FM", "MD", "PS", "KR", "TW", "TZ", "TL", "GB"];
 const WARP_FEATURES = ["plus", "on"];
 
 let args = getArgs();
 
 (async () => {
-let now = new Date();
-let hour = now.getHours();
-let minutes = now.getMinutes();
-hour = hour > 9 ? hour : "0" + hour;
-minutes = minutes > 9 ? minutes : "0" + minutes;
+    let now = new Date();
+    let hour = now.getHours();
+    let minutes = now.getMinutes();
+    hour = hour > 9 ? hour : "0" + hour;
+    minutes = minutes > 9 ? minutes : "0" + minutes;
 
-let panel_result = {
-  title: `${args.title} | ${hour}:${minutes}` || `解鎖檢測 | ${hour}:${minutes}`,
-  content: '',
-  icon: args.icon || "eye.slash.circle.fill",
-  "icon-color": args.color || "#ffb621",
-};
+    let panel_result = {
+        title: `${args.title} | ${hour}:${minutes}` || `解鎖檢測 | ${hour}:${minutes}`,
+        content: '',
+        icon: args.icon || "eye.slash.circle.fill",
+        "icon-color": args.color || "#ffb621",
+    };
 
-let [{ region, status }] = await Promise.all([testDisneyPlus()]);
-let netflixResult = await check_netflix();
-let youtubeResult = await check_youtube_premium();
+    let [{ region, status }] = await Promise.all([testDisneyPlus()]);
+    let netflixResult = await check_netflix();
+    let youtubeResult = await check_youtube_premium();
 
-let disney_result = formatDisneyPlusResult(status, region);
-let traceData = await getTraceData();
-let gptSupportStatus = SUPPORTED_LOCATIONS.includes(traceData.loc) ? "ChatGPT: \u2611" : "ChatGPT: \u2612";
+    let disney_result = formatDisneyPlusResult(status, region);
+    let traceData = await getTraceData();
+    let gptSupportStatus = SUPPORTED_LOCATIONS.includes(traceData.loc) ? "ChatGPT: ✔️" : "ChatGPT: ❌";
 
-let content = `${youtubeResult} ${netflixResult}\n${gptSupportStatus}${traceData.loc.padEnd(3)}${disney_result} `;
+    let youtubeCheck = youtubeResult.padEnd(25);
+    let netflixCheck = netflixResult.padEnd(25);
+    let gptCheck = gptSupportStatus.padEnd(25);
+    let disneyCheck = disney_result.padEnd(25);
 
-let log = `${hour}:${minutes}.${now.getMilliseconds()} 解鎖檢測完成：${content}`;
-console.log(log);
+    let content = `${youtubeCheck} | ${netflixCheck}\n${gptCheck} | ${disneyCheck}`;
 
-panel_result['content'] = content;
+    let log = `${hour}:${minutes}.${now.getMilliseconds()} 解鎖檢測完成：${content}`;
+    console.log(log);
 
-$done(panel_result);
+    panel_result['content'] = content;
+
+    $done(panel_result);
 })();
 
 function getArgs() {
-  return Object.fromEntries(
-    $argument
-      .split("&")
-      .map((item) => item.split("="))
-      .map(([k, v]) => [k, decodeURIComponent(v)])
-  );
+    return Object.fromEntries(
+        $argument
+            .split("&")
+            .map((item) => item.split("="))
+            .map(([k, v]) => [k, decodeURIComponent(v)])
+    );
 }
 
 function formatDisneyPlusResult(status, region) {
-  switch (status) {
-    case STATUS_COMING:
-      return `| Disney: Soon~ ${region.toUpperCase()} `;
-    case STATUS_AVAILABLE:
-      return `| Disney: \u2611${region.toUpperCase()} `;
-    case STATUS_NOT_AVAILABLE:
-      return `| Disney: \u2612`;
-    case STATUS_TIMEOUT:
-      return `| Disney: N/A `;
-    default:
-      return `| Disney: 錯誤 `;
-  }
+    switch (status) {
+        case STATUS_COMING:
+            return `| Disney: Soon~ ${region.toUpperCase()} `;
+        case STATUS_AVAILABLE:
+            return `| Disney: ✔️ ${region.toUpperCase()} `;
+        case STATUS_NOT_AVAILABLE:
+            return `| Disney: ❌`;
+        case STATUS_TIMEOUT:
+            return `| Disney: N/A `;
+        default:
+            return `| Disney: 错误 `;
+    }
 }
 
 async function check_youtube_premium() {
