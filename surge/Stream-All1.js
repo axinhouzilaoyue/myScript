@@ -85,15 +85,15 @@ function getArgs() {
 function formatDisneyPlusResult(status, region) {
     switch (status) {
         case STATUS_COMING:
-            return `| Disney: Soon~ ${region.toUpperCase()} `;
+            return `Disney: Soon~ ${region.toUpperCase()} `;
         case STATUS_AVAILABLE:
-            return `| Disney: ✔️ ${region.toUpperCase()} `;
+            return `Disney: ✔️ ${region.toUpperCase()} `;
         case STATUS_NOT_AVAILABLE:
-            return `| Disney: ❌`;
+            return `Disney: ❌`;
         case STATUS_TIMEOUT:
-            return `| Disney: N/A `;
+            return `Disney: N/A `;
         default:
-            return `| Disney: 错误 `;
+            return `Disney: 错误 `;
     }
 }
 
@@ -135,13 +135,13 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += '\u2009\u2612      \u2009|';
+        youtube_check_result += '\u2009\u2612      \u2009';
       } else {
-        youtube_check_result += "\u2009\u2611" + code.toUpperCase() + ' \u2009|';
+        youtube_check_result += "\u2009\u2611" + code.toUpperCase() + ' \u2009';
       }
     })
     .catch(() => {
-      youtube_check_result += ' N/A   |';
+      youtube_check_result += ' N/A';
     });
 
   return youtube_check_result;
