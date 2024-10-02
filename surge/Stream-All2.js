@@ -58,10 +58,10 @@ let args = getArgs();
     let traceData = await getTraceData();
     let gptSupportStatus = SUPPORTED_LOCATIONS.includes(traceData.loc) ? "ChatGPT: ✔️" : "ChatGPT: ❌";
 
-    let youtubeCheck = youtubeResult.padEnd(25);
-    let netflixCheck = netflixResult.padEnd(25);
-    let gptCheck = gptSupportStatus.padEnd(25);
-    let disneyCheck = disney_result.padEnd(25);
+    let youtubeCheck = youtubeResult.padEnd(21);
+    let netflixCheck = netflixResult.padEnd(21);
+    let gptCheck = gptSupportStatus.padEnd(21);
+    let disneyCheck = disney_result.padEnd(21);
 
     let content = `${youtubeCheck} | ${netflixCheck}\n${gptCheck} | ${disneyCheck}`;
 
