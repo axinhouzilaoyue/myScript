@@ -7,7 +7,7 @@
 #!input-desc=请填写Bearer令牌值(不需要包含Bearer前缀)
 
 [Rewrite]
-^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ header-add Authorization Bearer\x20$bearerToken
+^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ header-add Authorization "Bearer $bearerToken"
 
 [Mitm]
 hostname = aigc.sankuai.com
