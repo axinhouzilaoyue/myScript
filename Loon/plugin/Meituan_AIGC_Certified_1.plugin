@@ -1,6 +1,6 @@
 #!name=美团AIGC认证插件
 #!desc=为美团AIGC请求添加认证信息(使用前请在插件设置中配置令牌)
-#!author=你的名字
+#!author=Claude
 #!homepage=https://github.com/你的用户名/插件仓库
 #!icon=https://raw.githubusercontent.com/你的用户名/插件仓库/main/icon.png
 
