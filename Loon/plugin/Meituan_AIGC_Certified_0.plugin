@@ -6,7 +6,7 @@
 #!input=bearerToken
 #!input-desc=请填写Bearer令牌值(不需要包含Bearer前缀)
 
-[Rewrite]
+[Script]
 http-request ^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ script-path=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/refs/heads/main/Loon/meituan_aigc.js, tag=美团AIGC认证
 
 [Mitm]
