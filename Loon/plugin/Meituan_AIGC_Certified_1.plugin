@@ -1,0 +1,11 @@
+#!name=美团AIGC认证插件
+#!desc=为美团AIGC请求添加认证信息(使用前请在插件设置中配置令牌)
+#!author=你的名字
+#!homepage=https://github.com/你的用户名/插件仓库
+#!icon=https://raw.githubusercontent.com/你的用户名/插件仓库/main/icon.png
+
+[Script]
+http-request ^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ script-path=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/refs/heads/main/Loon/meituan_aigc.js, tag=美团AIGC认证
+
+[Mitm]
+hostname = aigc.sankuai.com
