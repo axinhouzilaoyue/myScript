@@ -1,2 +1,8 @@
 # myScript
-surge 配置
+
+<!-- Start: Surge Module Install Button -->
+<a style="border-bottom: none; display: inline-flex; align-items: center;" href="surge:///install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2Faxinhouzilaoyue%2FmyScript%2Fmain%2Fsurge%2FModule%2Fgithub_429.sgmodule" target="_blank">
+    <span style="font-weight: bold; margin-right: 5px;">github_429.sgmodule </span><img alt="Import GitHub English Prefer Module into Surge" title="Import GitHub English Prefer Module into Surge (Axin & Gemini)" style="height: 22px; vertical-align: middle;"
+        src="https://raw.githubusercontent.com/xream/scripts/refs/heads/main/scriptable/surge/surge-transparent.png">
+</a>
+<!-- End: Surge Module Install Button -->
