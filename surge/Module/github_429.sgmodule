@@ -1,5 +1,6 @@
 #!name=github_429
 #!desc=修改 Github 静态资源请求头
+#!category=Axin
 
 [Header Rewrite]
 http-request \.githubusercontent\.com header-replace Accept-Language "en-US,en;q=0.9"
