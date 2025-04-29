@@ -1,0 +1,9 @@
+#!name=GitHub Content English Prefer (Axin & Gemini)
+#!desc=Force Accept-Language to English for raw/gist.githubusercontent.com. Requires MITM. By Axin & Gemini.
+#!author=Axin & Gemini
+
+[Header Rewrite]
+http-request (gist|raw)\.githubusercontent\.com header-replace accept-language "en-US,en;q=0.9"
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
