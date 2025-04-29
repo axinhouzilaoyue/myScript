@@ -1,6 +1,6 @@
 #!name=github_429
 #!desc=修改 Github 静态资源请求头
-#!auth=Axin
+#!author=Axin
 #!category=Axin
 #!date=2025-04-29 21:51:56
 
