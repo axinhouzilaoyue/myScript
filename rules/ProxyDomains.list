@@ -4,7 +4,6 @@
 # DESCRIPTION: 日常使用需要代理的域名
 
 DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,zh.annas-archive.org
 DOMAIN,ghproxy.com
 DOMAIN-SUFFIX,jsdelivr.net
