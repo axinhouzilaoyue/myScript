@@ -125,7 +125,7 @@ async function operator(proxies = [], targetPlatform, context) {
      const status = parseInt(res.status || res.statusCode || 200)
      
      if (status >= 200 && status < 400) {
-       proxies[proxy._proxies_index].name = `[IPv6] ${proxies[proxy._proxies_index].name}`
+       proxies[proxy._proxies_index].name = `${proxies[proxy._proxies_index].name}₄₆`
      }
    } catch (e) {
      $.error(`[${proxy.name}] ${e.message}`)
