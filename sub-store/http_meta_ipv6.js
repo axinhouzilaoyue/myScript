@@ -21,7 +21,7 @@
 
 async function operator(proxies = [], targetPlatform, context) {
  const $ = $substore
- const ipv6_test_url = 'https://speed.neu6.edu.cn'
+ const ipv6_test_url = 'http://test6.ustc.edu.cn'
  const http_meta_host = $arguments.http_meta_host ?? '127.0.0.1'
  const http_meta_port = $arguments.http_meta_port ?? 9876
  const http_meta_protocol = $arguments.http_meta_protocol ?? 'http'
