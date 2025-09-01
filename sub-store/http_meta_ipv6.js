@@ -5,6 +5,7 @@
  * 欢迎加入 Telegram 群组 https://t.me/zhetengsha
  *
  * HTTP META(https://github.com/xream/http-meta) 参数
+ * - [ipv6_test_url] 测试网址 默认：http://test6.ustc.edu.cn
  * - [http_meta_protocol] 协议 默认: http
  * - [http_meta_host] 服务地址 默认: 127.0.0.1
  * - [http_meta_port] 端口号 默认: 9876
@@ -87,7 +88,7 @@ async function operator(proxies = [], targetPlatform, context) {
  $.info(`等待 ${http_meta_start_delay / 1000} 秒后开始检测`)
  await $.wait(http_meta_start_delay)
 
- const concurrency = parseInt($arguments.concurrency || 10)
+ const concurrency = parseInt($arguments.concurrency || 20)
  await executeAsyncTasks(
    internalProxies.map(proxy => () => check(proxy)),
    { concurrency }
