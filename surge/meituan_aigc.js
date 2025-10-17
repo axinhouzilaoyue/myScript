@@ -21,7 +21,7 @@ if (newAuthValue) {
     headers["Authorization"] = `Bearer ${newAuthValue}`;
 
     // 完成请求，应用修改后的 headers
-    $done({headers: $request.headers});
+    $done({headers});
 } else {
     console.log("美团AIGC认证：模块参数 (argument) 未设置，未执行任何操作。");
     $done({});
