@@ -1,5 +1,15 @@
-[Script]
-http-request ^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ script-path=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/refs/heads/main/Surge/meituan_aigc.js, tag=美团AIGC认证
+#!name=美团AIGC认证插件
+#!desc=为美团AIGC请求添加认证信息(使用前请在插件设置中配置令牌)
+#!author=Claude
+#!homepage=https://github.com/你的用户名/插件仓库
+#!icon=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/main/QuantumultX/icons/meituan.png
+#!arguments=bearerToken:用于认证的 Bearer 令牌
+#!arguments-desc=请在插件设置中配置 Bearer 令牌，确保 Bearer 令牌有效。
 
 [MITM]
 hostname = aigc.sankuai.com
+
+[Script]
+# 美团AIGC认证请求
+MEITUAN_AIGC_AUTH = type=http-request,pattern=^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$,script-path=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/refs/heads/main/Surge/meituan_aigc.js,timeout=10,argument="bearerToken={{{bearerToken}}}",engine=auto
+
