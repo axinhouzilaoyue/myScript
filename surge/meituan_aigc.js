@@ -17,7 +17,8 @@ if (newAuthValue) {
     // console.log(`新值: ${newAuthValue}`);
 
     // 替换 Header
-    $request.headers['Authorization'] = newAuthValue;
+    const headers = $request.headers;
+    headers["Authorization"] = newAuthValue;
 
     // 完成请求，应用修改后的 headers
     $done({headers: $request.headers});
