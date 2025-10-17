@@ -18,7 +18,7 @@ if (newAuthValue) {
 
     // 替换 Header
     const headers = $request.headers;
-    headers["Authorization"] = newAuthValue;
+    headers["authorization"] = newAuthValue;
 
     // 完成请求，应用修改后的 headers
     $done({headers});
