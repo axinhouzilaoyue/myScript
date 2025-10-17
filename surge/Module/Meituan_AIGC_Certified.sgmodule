@@ -1,0 +1,5 @@
+[Script]
+http-request ^https://aigc\.sankuai\.com/v1/openai/native/chat/completions$ script-path=https://raw.githubusercontent.com/axinhouzilaoyue/myScript/refs/heads/main/Surge/meituan_aigc.js, tag=美团AIGC认证
+
+[MITM]
+hostname = aigc.sankuai.com
