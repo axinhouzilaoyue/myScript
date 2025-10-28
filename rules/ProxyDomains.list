@@ -14,3 +14,6 @@ DOMAIN-SUFFIX,bitbucket.org
 DOMAIN-SUFFIX,www.speedtest.net
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip.im
+DOMAIN-SUFFIX,iplark.com # IP 信息检测
+DOMAIN-SUFFIX,googleapis.com # 谷歌API服务
+DOMAIN-SUFFIX,claude.ai # Claude
