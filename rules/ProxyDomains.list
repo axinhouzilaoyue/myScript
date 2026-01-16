@@ -3,10 +3,7 @@
 # UPDATED: 2026-01-16 23:12
 # DESCRIPTION: 日常使用需要代理的域名
 
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN,ghproxy.com
 DOMAIN-SUFFIX,jsdelivr.com
-DOMAIN-SUFFIX,www.speedtest.net
 DOMAIN-SUFFIX,ip.im # IP 信息检测
 DOMAIN-SUFFIX,iplark.com # IP 信息检测
