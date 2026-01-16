@@ -3,6 +3,9 @@
 # UPDATED: 2026-01-16 23:12
 # DESCRIPTION: 日常使用需要代理的域名
 
+DOMAIN-SUFFIX,linux.do
+DOMAIN-SUFFIX,idcflare.com
+DOMAIN-SUFFIX,speedtest.net
 DOMAIN,ghproxy.com
 DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,ip.im # IP 信息检测
