@@ -1,10 +1,5 @@
 # NAME: DirectDomains
 # AUTHOR: axin
-# UPDATED: 2024-09-18 23:12
+# UPDATED: 2026-01-16 23:12
 # DESCRIPTION: 日常使用需要直连的域名
 
-DOMAIN-SUFFIX,alipan.com
-DOMAIN-SUFFIX,axinhzly.me
-DOMAIN-SUFFIX,miwifi.com
-DOMAIN-SUFFIX,macapp.org.cn
-DOMAIN-SUFFIX,bjdj.gov.cn
