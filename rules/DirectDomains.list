@@ -4,5 +4,6 @@
 # DESCRIPTION: 日常使用需要直连的域名
 
 DOMAIN-SUFFIX,711511.xyz
+DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,euserv.com
 DOMAIN-SUFFIX,tju.pt
