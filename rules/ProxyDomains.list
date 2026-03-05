@@ -11,3 +11,5 @@ DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,ip.im # IP 信息检测
 DOMAIN-SUFFIX,iplark.com # IP 信息检测
 DOMAIN-SUFFIX,alma.now
+DOMAIN-SUFFIX,javdb.com # NSFW
+DOMAIN-SUFFIX,nyaa.si # NSFW
