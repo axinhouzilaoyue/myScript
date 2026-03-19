@@ -8,8 +8,10 @@ DOMAIN-SUFFIX,idcflare.com
 DOMAIN-SUFFIX,speedtest.net
 DOMAIN,ghproxy.com
 DOMAIN-SUFFIX,jsdelivr.com
-DOMAIN-SUFFIX,ip.im # IP 信息检测
-DOMAIN-SUFFIX,iplark.com # IP 信息检测
 DOMAIN-SUFFIX,alma.now
-DOMAIN-SUFFIX,javdb.com # NSFW
-DOMAIN-SUFFIX,nyaa.si # NSFW
+# IP 信息检测
+DOMAIN-SUFFIX,ip.im
+DOMAIN-SUFFIX,iplark.com
+# NSFW
+DOMAIN-SUFFIX,javdb.com
+DOMAIN-SUFFIX,nyaa.si
