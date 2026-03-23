@@ -15,3 +15,10 @@ DOMAIN-SUFFIX,iplark.com
 # NSFW
 DOMAIN-SUFFIX,javdb.com
 DOMAIN-SUFFIX,nyaa.si
+# 美团
+DOMAIN-SUFFIX,51ping.com
+DOMAIN-SUFFIX,neixin.cn
+DOMAIN-SUFFIX,meituan.net
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,sankuai.com
+DOMAIN-SUFFIX,axinhzly.ide
