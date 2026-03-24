@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,tju.pt
 DOMAIN-SUFFIX,northflank.com
 DOMAIN-SUFFIX,git.imee.me
+DOMAIN,releases.warp.dev
 
 # 美团
 DOMAIN-SUFFIX,51ping.com
