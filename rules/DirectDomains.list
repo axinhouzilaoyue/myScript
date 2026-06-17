@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,northflank.com
 DOMAIN-SUFFIX,git.imee.me
 DOMAIN-SUFFIX,cloudapp.azure.com
 # DOMAIN,releases.warp.dev
+DOMAIN-SUFFIX,tavily.com
 
 # 美团
 DOMAIN-SUFFIX,51ping.com
