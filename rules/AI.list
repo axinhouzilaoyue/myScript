@@ -1,0 +1,8 @@
+# NAME: AI
+# AUTHOR: axin
+# UPDATED: 2026-01-16 23:12
+# DESCRIPTION: 需要走AI分流规则的域名
+
+DOMAIN-SUFFIX,www.google.com
+DOMAIN-SUFFIX,userlocations.googleapis.com # Google IP 定位域名
+DOMAIN-SUFFIX,gemini.gstatic.com # Gemini静态资源
