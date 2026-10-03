@@ -10,6 +10,7 @@ DOMAIN,ghproxy.com
 DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,alma.now
 DOMAIN-SUFFIX,surge-activation.com
+DOMAIN-SUFFIX,services.googleapis.cn
 # IP 信息检测
 DOMAIN-SUFFIX,ip.im
 DOMAIN-SUFFIX,iplark.com
