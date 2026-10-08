@@ -3,7 +3,7 @@
 # UPDATED: 2026-01-16 23:12
 # DESCRIPTION: 日常使用需要直连的域名
 
-# DOMAIN-SUFFIX,711511.xyz
+DOMAIN-SUFFIX,711511.xyz
 DOMAIN,cdn.ldstatic.com
 # DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,tju.pt
