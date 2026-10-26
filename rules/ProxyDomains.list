@@ -4,6 +4,7 @@
 # DESCRIPTION: 日常使用需要代理的域名
 
 # DOMAIN-SUFFIX,711511.xyz
+DOMAIN-SUFFIX,dockerproxy.net
 DOMAIN-SUFFIX,usemagpie.ai
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,idcflare.com
