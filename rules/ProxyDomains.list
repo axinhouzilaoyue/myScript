@@ -26,3 +26,10 @@ DOMAIN-SUFFIX,iplark.com
 DOMAIN-SUFFIX,javdb.com
 DOMAIN-SUFFIX,nyaa.si
 
+#glados
+DOMAIN-SUFFIX,glados.one
+DOMAIN-SUFFIX,glados.cloud
+DOMAIN-SUFFIX,glados.network
+DOMAIN-SUFFIX,glados.rocks
+DOMAIN-SUFFIX,glados.work
+DOMAIN-SUFFIX,glados.space
