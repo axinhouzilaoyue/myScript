@@ -7,6 +7,7 @@
 #cf tunnel
 DOMAIN-SUFFIX,emby.711511.xyz
 DOMAIN-SUFFIX,openlist.711511.xyz
+DOMAIN-SUFFIX,mail.711511.xyz
 
 # DOMAIN-SUFFIX,711511.xyz
 DOMAIN-SUFFIX,cloudflare.dev
